@@ -1,0 +1,777 @@
+//Total no of questions:-85
+//Multiple Choice :- 78
+//True/False :- 3
+//Match the following:- 4
+
+//Guid:-f12ecf92-7f0a-419d-a823-aedfd5fbf4d4
+What is a Load Balancer?{
+=Exposes the service externally using a cloud provider's load balancer.
+~Makes the service only reachable from within the cluster.
+~Exposes the service on each Node's IP at a static port.
+~None of the above.
+}
+
+//Guid:-84390e79-c7b9-4fc4-b408-f6ab202b1dae
+What is service discovery?{
+=It is a registry of services.
+~It is a registry of containers.
+~It is a registry of Pods.
+~It is a registry of application code.
+}
+
+//Guid:-9b09e7ad-2e8e-437f-8c6c-2a3b80558d1f
+::Zuul Filters::
+Zuul filters can be defined to add additional processing operations at what points during the processing and routing of a request?{
+~only before routing.
+~only after routing
+~before or after routing.
+=before or after routing, as routing, or upon error.
+}
+
+//Guid:-19dea339-87dd-4c43-a32f-5b539673f576
+One of the advantages of developing applications using SOAP is that?{
+~Requests and responses will always utilize JSON.
+~It leverages many functionalities built into HTTP to remain lightweight.
+=It has many tools available to help accelerate application development.
+~SOAP is the best way to produce cleaner code.
+}	
+
+//Guid:-68266f79-9666-4d6f-85a7-5809ee830da6
+SOAP can be utilized over which protocol(s)?{
+~HTTP and HTTPS only
+~HTTP only
+~FTP and SMTP only
+=HTTP, HTTPS, FTP, SMTP, amongst others
+}
+
+//Guid:-b3a2a0b5-5030-47c9-9fd2-ddc4a0e8cc55
+Applications can communicate using XML and still be considered RESTful?{
+=True
+~False
+}
+
+//Guid:-f278839e-0f6f-4816-a888-8bb2d226f2e5
+A SOAP contract is?{
+~An XSD file used to describe types.
+~A WADL file.
+=A WSDL file.
+~They're really more guidelines than actual rules.
+}
+
+//Guid:-37f0f4df-7752-461b-ae7f-3c48cd2ae2da
+Contract-first means that ?{
+~You don't begin work until the client's signed a contract.
+~You write the WSDL document, then you write the application code to match it.
+=You write the WSDL document, then you generate application code from the WSDL.
+~You generate the WSDL document, based on existing application code.
+}
+
+//Guid:-718126a0-f045-4aac-9072-77b3d2f99558
+Zuul is a ?{
+~discovery service
+=gateway service
+~configuration service
+~messaging queue
+}
+
+//Guid:-c74d0226-cc0f-4116-9f83-9769982c7eeb
+<code>Netlfix Hystrix</code> is a ?{
+~reverse proxy
+~configuration service
+~discovery service
+=circuit breaker
+}
+
+//Guid:-a7def850-053d-4f6a-9b3d-7b8001b461f3
+One of the primary goals of Microservices Architecture (MSA) is to eliminate?{
+~humans
+=single points of failure
+~code reuse
+~databases
+}
+
+//Guid:-c9e4634f-1e03-4d25-9fc8-44c5e03e96ce
+<code>bootstrap.yml</code> is different than <code>properties.yml</code> in that?{
+~It is used for configuring Netflix applications, not Spring applications.
+=It is loaded earlier in the Spring Boot lifecycle, allowing it to configure some things that application.yml cannot.
+~It cannot set the port.
+~It is the only way to set an application's name.
+}
+
+//Guid:-f5857a2a-bf0e-401f-ae0d-60fda8ed4d2b
+A messaging queue is often used in MSA when?{
+~You want to send memes to your friends, but the company monitors slack.
+~You need to implement the circuit breaker pattern.
+~You do not plan to use Zuul.
+=Changes in one service must be relayed to another service in a failproof fashion.
+}
+
+//Guid:-d8997573-138d-4c8f-bdbd-c1f7ea57c638
+When a service sends a request to another service, but the service is unable to respond, the most appropriate course of action is to?{
+~Let the request fail and let the client application receive a 500 status.
+~Redeploy the application.
+~Send a 503 status, indicating that the requested information is temporarily unavailable.
+=Handle the failure with a circuit breaker pattern, and respond to the user with what data was availble.
+}
+
+//Guid:-0f8e4351-36e9-4e29-9fd6-9df5fd55ce05
+A gateway service is an application whose responsibility it is to?{
+~Enforce business logic.
+~Communicate with the database.
+=Act as the entry point to the microservices application for requests originating outside.
+~Act as a registry of running services that can be checked for mapping requests.
+}
+
+//Guid:-a3c095ea-219b-49af-8d32-dec2424bf810
+A discovery service is an application whose responsibility it is to?{
+~Prevent cascading failures.
+=Act as a registry of running services that can be checked for mapping requests.
+~Route requests to services.
+~Deploy an application to a cloud service.
+}
+
+//Guid:-bdc50568-4aa9-4951-a85b-c272543cd1c6
+What is the default port for Eureka?{
+~8888
+~8080
+=8761
+~5432
+}
+
+//Guid:-f1339dc8-e712-4226-b649-94666bc7a9f3
+What is the default port for Spring Cloud Config?{
+=8888
+~8080
+~8761
+~5432
+}
+
+//Guid:-5f1e3739-ec1b-4a74-b84f-3244e8bb0e13
+Netflix does not have any support for load balancing?{
+~True
+=False
+}
+
+//Guid:-ce2bf143-20d1-485e-96f1-fd039fe7bcca
+How can we create a service which manages centralized configuration, using Spring Cloud?{
+~<code>@ConfigServer</code>
+~<code>@EnableConfig</code>
+~<code>@EnableConfigurationServer</code>
+=<code>@EnableConfigServer</code>
+}
+
+//Guid:-a656ff6b-077d-478a-98c2-9d4b0d45d454
+How can we create a gateway service using Spring Cloud Netflix?{
+~<code>@EnableZuulService</code>
+~<code>@EnableGatewayService</code>
+=<code>@EnableZuulProxy</code>
+~<code>@EnableZuulClient</code>
+}
+
+//Guid:-31a4fc14-57dd-489b-83f0-bede0d0cf8d1
+What is Netflix's implementation of the gateway service?{
+=Zuul
+~Eureka
+~Hystrix
+~Ribbon
+}
+
+//Guid:-105601b2-eb15-4890-956b-a990c74c1307
+Netflix's Ribbon is used for?{
+~discovery service
+~gateway service
+~circuit breaking
+=load balancing
+}
+
+
+//Guid:- 4a1677f7-9cc4-4ecc-9c53-b22fc87584f4
+___________ is a method for application components to locate each other.?{
+    ~Service Registry
+    =Service Discovery
+    ~IP addresses
+    ~Microservice.
+}
+
+//Guid:- 94359e66-86a6-4eb6-8bdc-000b0091ca75
+Why do we need service Registry ?{
+    ~To track the IP addresses in the network locations of service instances.
+    ~To track the dynamic changes in the microservices.
+    =To track the dynamic changes in the network locations of service instances.
+    ~To track the changes being made in the database.
+}
+
+//Guid:- dc07bad9-a230-4677-a746-3c88f5491517
+Which of the following mechanism will check the service is alive or not ?
+ ~Alive mechanism
+ =Heartbeat mechanism
+ ~Service Alive mechanism
+ ~HeartAlive mechanism
+}
+
+//Guid:- 6a4d0c80-6bb5-41f2-88b9-6863d2d9a35f
+Which of the following is a good example of a service registry?{
+~reverse proxy
+~configuration service
+~discovery service
+=netflix eureka
+~circuit breaker
+}
+
+
+//Guid:- 9336589d-24ca-464d-a7f8-0cb301f7fbc0
+::Select four options::
+What are some of the examples for service registries ?{
+~REST
+~%25%etc distributed
+~cted
+~etsd
+~%25%apache zookeeper
+~%25%netflix eureka
+~%25%consul
+}
+
+//Guid:- 81f2f946-1077-470c-94bc-8bf4d4d0e0a9
+Which method is used for registering a service instances?{
+    ~<code>PUT</code>
+    =<code>POST</code>
+    ~<code>GET</code>
+    ~<code>SET</code>
+}
+
+//Guid:- e715a702-a5ce-4ad7-be2c-55dd356d6ae5
+Which method is used for refreshing its registration with a service instances?{
+    =<code>PUT</code>
+    ~<code>POST</code>
+    ~<code>GET</code>
+    ~<code>SET</code>
+}
+
+//Guid:- 45870a8c-d240-47eb-a6f0-cf43f7cd28f5
+Client can retrieve the registered service instance by using Which method?{
+    ~<code>PUT</code>
+    ~<code>POST</code>
+    ~<code>GET</code>
+    ~<code>SET</code>
+    =<code>HTTP GET</code>
+}
+
+//Guid:- 5c02553b-4bfa-429e-8a28-55794f7fc8c4 
+Which method is used for removing a registration ?{
+    ~<code>PUT</code>
+    ~<code>POST</code>
+    ~<code>GET</code>
+    ~<code>HTTP GET</code>
+    ~<code>DELETE</code>
+    =<code>HTTP DELETE</code>
+}
+
+//Guid:- 87d0e021-c48a-433f-a3e7-9efd4c4d239e
+::Select two options::
+What are the two types of microservice registration patterns?{
+    ~Service-instance Registration Pattern
+    ~%50%Self-Registration Pattern
+    ~%50%Third-Party Registration Pattern
+    ~Service-Registry Registration Pattern
+    ~Service-Discovery Registration Pattern
+}
+
+//Guid:- a05bea4f-1fbd-4b12-8658-d9c23584459a
+Which of the following is a good example for Self-registration patterns ?{
+    ~Netflix Eureka.
+    =Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~apache zookeeper.
+    ~None of the above.
+}
+
+//Guid:- 76135e29-8b28-4bce-8de1-a1cb76da5ce1
+Which of the following is a good example for Third-party registration patterns ?{
+    ~Netflix Eureka.
+    ~Netflix OSS Eureka Client.
+    =Netflix OSS Prana.
+    ~apache zookeeper.
+    ~None of the above.
+}
+
+//Guid:- 1ce56564-0fc4-4e8c-89a5-321e8bac7a61
+Which of the following annotation is used for adding eureka class files in java configuration class?{
+~<code>@EnableEurekaServer/code>
+~<code>@EnableDiscoveryClient</code>
+=<code>@EnableEurekaClient</code>
+~<code>@EnableNetflixEurekaClient</code>
+}
+
+//Guid:- f2cf9b9c-a6e9-4bd5-aa67-1e808c917674
+Which of the following annotation is used for adding eureka server in java configuration class?{
+=<code>@EnableEurekaServer/code>
+~<code>@EnableDiscoveryClient</code>
+~<code>@EnableEurekaClient</code>
+~<code>@EnableNetflixEurekaClient</code>
+}
+
+//Guid:- 8b00f8ce-dc5c-49a5-b5bf-cec7ba10636c
+Which of the following annotation is used for adding eureka client in java configuration class?{
+~<code>@EnableEurekaServer/code>
+=<code>@EnableDiscoveryClient</code>
+~<code>@EnableEurekaClient</code>
+~<code>@EnableNetflixEurekaClient</code>
+}
+
+//Guid:- bd243abf-b6c5-4763-92c8-67700a665dc3
+Which of the following handles the registration and deregistration in third-party registration patterns?{
+    ~service instance
+    ~service registry
+    ~service discovery
+    =service registrar
+}
+
+//Guid:- da8371fa-58ff-49e9-b4fb-a6d520636e74
+::Select two options::
+What are the two main service discovery pattern?{
+    ~Third-party discovery pattern
+    ~Self discovery pattern
+    ~%50%Client-Side discovery pattern 
+    ~%50%Server-Side discovery pattern
+}
+
+//Guid:- 755df1b7-232e-47c7-84bd-29b0a2323dc0
+Which of the following discovery pattern  will request a load-balancer first and then consults service registry and then gets the request?{ 
+    ~Third-party discovery pattern
+    ~Self discovery pattern
+    ~Client-Side discovery pattern 
+    =Server-Side discovery pattern
+    ~None of the above.
+}
+
+//Guid:- 1b5fdc4b-00ad-44d4-b359-47b2633f302f
+Which of the following is a good example for Client-side discovery pattern ?{
+    ~Netflix Eureka.
+    ~Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~apache zookeeper.
+    =Netflix OSS.
+    ~AWS Elastic Load Balancing.
+}
+
+//Guid:- 8ea18168-8cf8-420e-a5a5-220ab719caf8
+Which of the following is a good example for Server-side discovery pattern ?{
+    ~Netflix Eureka.
+    =AWS Elastic Load Balancing.
+    ~Netflix OSS.
+    ~Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~apache zookeeper.
+}
+
+//Guid:- f4d0c35c-fb40-4b5d-a7af-0aecce036d36
+::Select two options::
+Which of the following service registry has an in built registration and deregistration of service discovery?{
+~Netflix OSS.
+~Netflix OSS Eureka Client.
+~Netflix OSS Prana.
+~%50%Kubernetes
+~apache zookeeper.
+~AWS Elastic Load Balancing.
+~%50%Marathon
+}
+
+//Guid:- 7bf2bebf-4962-4eef-877f-5a5f05613677
+::True Or False::
+If there are any failures in the backend services, the API gateway will mask them by returning cached data or default data ?{
+    =True
+    ~False
+}
+
+//Guid:- 1702f3f6-df2b-4786-8c8e-0767640e1783
+::Select four options::
+Zuul is built to enable ?{
+    ~Registering
+    ~%25%Dynamic Routing
+    ~%25%Monitoring
+    Service Instances
+    ~%25%Resiliency
+    ~%25%Security
+    ~Filtering
+    Service Discovery
+}
+
+//Guid:- 348a9b0d-07ee-4f9b-b23b-0df184209994
+::Select four options::
+What are the four types of zuul filters?{
+    ~%25%pre filters
+    ~security filters
+    ~get filters
+    ~set filters
+    ~%25%post filters
+    ~%25%route filters
+    ~%25%error filters
+} 
+
+//Guid:- 08deb812-64a3-4259-8ffc-73f7a74573c3
+::Match the following filters::
+=pre filters –> executed before the request is routed.
+=post filters –> executed after the request has been routed.
+=route filters –> used to route the request.
+=error filters –> executed when an error occurs while handling the request.
+
+//Guid:- 385124f3-bb88-4a95-b4ff-66a483e2c856
+::Select two options::
+Which of the following methods does a <code>@RestController</code> annotation has ?{
+    ~<code>@EmebeddableMapping</code>
+    ~%50%<code>@GetMapping</code>
+    ~%50%<code>@RequestMapping</code>
+    ~<code>@IdMapping</code>
+    ~<code>@ReloadMapping</code>
+}
+
+//Guid:- a705e268-c946-45bd-a284-f8dfd7b53aec
+::Select two options::
+Which are the two methods that are associated with <code>@RequestMapping</code method has ?{
+    ~%50%<code>available()</code>
+    ~<code>service()</code>
+    ~%50%<<code>checkedOut()</code>
+    ~<code>registrar()</code>
+}
+
+//Guid:- d786bca7-6069-4f6d-897a-968d8ee9c148
+Which of the following annotation will turn the gateway application into a reverse proxy that forwards relevant calls to other services?{
+~<code>@EnableEurekaServer/code>
+~<code>@EnableDiscoveryClient</code>
+~<code>@EnableEurekaClient</code>
+=<code>@EnableZuulProxy</code>
+}
+
+//Guid:- bb770e92-c422-4714-b599-45c579a795b2
+Select a valid syntax for setting application.properties file to set the zuul routes ?{
+~<pre>zuul.set.url\=http://localhost:8081
+ribbon.eureka.enabled\=True
+server.port\=8080</pre>
+
+=<pre>zuul.routes.name.url\=http://localhost:8081
+ribbon.eureka.enabled\=false
+server.port\=8080</pre>
+
+~<pre>zuul.routes.url\=http://localhost:8081
+ribbon.eureka.enabled\=false
+server.port\=8080</pre>
+
+~None of the above.
+}
+
+
+//Guid:- 7c8d5543-0227-409a-93ee-72efa853aac8
+Which of the following will use Netflix Eureka by default for service discovery?{
+    ~Netflix Zuul.
+    =Netflix Ribbon.
+    ~Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~None of the above.
+}
+
+//Guid:- dcba6d6b-58c4-4a61-9f8f-d1bbe2cc5074
+Spring cloud Netflix Zuul uses _________ to perform client-side load balancing.?{
+    ~Netflix Eureka
+    =Netflix Ribbon.
+    ~Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~None of the above.
+}
+
+//Guid:- 11855d34-fa20-4a01-b09d-c4f6ea107662
+Why do we set <code>ribbon.eureka.enabled\=false</code> ?{
+~By default, Ribbon would use Netflix ribbon for service discovery. For this reason, we skip service discovery by setting <code>ribbon.eureka.enabled</code> to false.
+~By default, Ribbon would use Netflix Zuul for service discovery. For this reason, we skip service discovery by setting <code>ribbon.eureka.enabled</code> to false.
+~By default, Ribbon would use Netflix OSS for service discovery. For this reason, we skip service discovery by setting <code>ribbon.eureka.enabled</code> to false.
+=By default, Ribbon would use Netflix Eureka for service discovery. For this reason, we skip service discovery by setting <code>ribbon.eureka.enabled</code> to false. 
+}
+
+//Guid:- 4004216e-83f8-4c54-a0f8-adfcee917c0d
+Which of the following annotation will extend <code>com.netflix.zuul.ZuulFilter</code>?{
+    ~<code>@NetflixZuul</code>
+    ~<code>@NetflixZuulFilter/code>
+    =<code>@Bean</code>
+    ~<code>@GetMapping</code>
+    ~<code>@RequestMapping</code>
+}
+
+//Guid:- d4992cbc-95a9-4929-a67d-85c58fc1c568
+::Select four options::
+Which of the following four methods implements Filter classes?{
+    ~<code>mustFilter()</code>
+    ~%25%<code>filterType()</code>
+    ~%25%<code>filterOrder()</code>
+    ~%25%<code>shouldFilter()</code>
+    ~<code>reuse()</code>
+    ~%25%<code>run()</code
+}
+
+//Guid:- c49411a2-3a9f-459f-b7fe-f8103e48cf2a
+Zuul filters store and state information in the ________?{
+    =RequestContext
+    ~RequestMapping
+    ~RequestRegister
+    ~RequestFilter
+} 
+
+//Guid:- c8432853-7868-4b18-9946-76458fe8cfec
+::Match the following filters with its usage::
+=<code>reuse()</code> -> Not a valid filter.
+=<code>filterType()</code> -> returns a string that stands for the type of the filter (pre,post,route,error).
+=<code>filterOrder()</code> -> gives the order in which this filter is to be run, relative to other filters.
+=<code>shouldFilter()</code> -> contains the logic that determines when to run this filter.
+=<code>run()</code> -> contains the functionality of the filter.
+=<code>mustFilter()</code> -> Not a valid filter.
+
+
+//Guid:- 72d4d61f-bb9d-4bcb-84e9-e7160c9d9352
+What is the use of RequestContext in Zuul filters?{
+=It can be used to get at the HttpServletRequest and then log the HTTP method and URL of the request before it is sent on its way.
+~It can be used to get at the HttpServletResponse and then log the HTTP request method and URL before it is sent on its way.
+~It can be used to get at the HttpServletRequest but needs to filter out the log and then the URL of the request is sent on its way.
+~None of the above.
+}
+
+//Guid:- 42d032d0-dd3e-4fe1-a65d-c886e6143079
+Which of the following is a client side load balancer ?{
+    ~Netflix Zuul.
+    =Netflix Ribbon.
+    ~Netflix OSS Eureka Client.
+    ~Netflix OSS Prana.
+    ~None of the above.
+}
+
+//Guid:- 8d145524-636f-4074-808f-ff2ec8b5c050
+::Select three options::
+What is true about load balancing ?{
+    ~%33.33%Routes Client Requests.
+    ~Ensures that one server should be overworked.
+    ~%33.33%Maximizes Speed and capacity utilization.
+    ~If one server goes down the load balancer will respond null value to the clients request.
+    ~%33.33%If a new server the load balancer will start sending requests to it.
+    ~Makes complicated by handling multiple requests.
+}   
+
+//Guid:- d0b94ca9-bd58-4119-9d02-da162c3a4108
+By default Netflix Ribbon uses which scheduling method to lookup services available in server?{
+    ~Priority Scheduling.
+    =Round Robbin Scheduling.
+    ~First-Come, First-Served Scheduling.
+    ~Shortest-Job-Next Scheduling.
+    ~Shortest Remaining Time.
+    ~Multiple-Level Queues Scheduling.
+}
+
+//Guid:- 5e438928-fed5-40e7-801d-db4107ec4a2d
+If we want to handle load balancing on its own. Which of the following properties can be added in zuul server ?{
+=<pre>ribbon:
+eureka:
+enabled:false
+listOfServers:
+localhost:8000,localhost:9092,localhost:9999</pre>
+
+~<pre>ribbon:
+enabled:True
+MaxAutoRetriesNextServer: 4
+OkToRetryOnOperations :false
+listOfServers:
+localhost:8000,localhost:9092,localhost:9999</pre>
+
+~<pre>ribbon:
+eureka:
+MaxAutoRetries: 3
+enabled:false
+listOfServers:
+localhost:8000,localhost:9092,localhost:9999</pre>
+}
+
+//Guid:- 7dd3a7c6-6b62-446e-8406-799f1a6f01e4
+To prevent a network service failure or from cascading to other services, we use ?{
+    ~Message-Queues
+    =Circuit Breaker Pattern
+    ~API-Gateway
+    ~Load-Balancing
+    ~Configuration Servers
+}
+
+//Guid:- ee62e778-0d55-47be-a93d-1406c39425a3
+::Select three options::
+Which of the following is true for using a circuit breaker pattern?(Here S1 is Service 1, and S2 is Service 2){
+    ~When S1 requests service from S2 and if S2 is occupied with some other request the S2 will immediately leave the handled request and respond to S1's requests.
+    ~When S1 requests service from S2 and if S2 is occupied with some other request the S1 will leave the handled request and respond immediately for another request.
+    ~%33.33%When S1 requests service from S2 and S2 is Occupied with some other request the S1 needs to wait until the S2 completes.
+    ~Threads might be consumed with the caller waiting for S2 to respond back the S1 will pass that request in threads and process some other requests.
+    ~%33.33%Threads might be consumed with the caller waiting for S2 to respond back this might lead to calling service to unable to handle other requests.
+    ~%33.33%S1 can wait for S2 to complete throughout the application.
+    ~None of the above.
+}
+
+//Guid:- 0acdce2a-da3a-45c3-bc9f-d9f3f385b83d
+::Select three Options::
+Circuit breaker has 3 distinct states what are they ?{
+    ~%33.33%Closed-State
+    ~Open-Half State
+    ~%33.33%Half-Open State
+    ~Full-Open State
+    ~Closed-Half State
+    ~Half-Closed State
+    ~%33.33% Open-State
+}
+
+//Guid:- b115b7b8-59b9-4e70-b717-5fbea6d9e61f
+Which of the following state will make a circuit breaker a trial call to the failed service periodically to check service has been recovered or not ?{
+    ~Closed-State
+    ~Open-Half State
+    ~Full-Open State
+    ~Closed-Half State
+    ~Open-State
+    =Half-Open State
+}   
+
+//Guid:- 37310a5b-1d16-4656-a4f5-8bee011c7b55
+::Select three Options::
+Which of the following is true for Netflix Hystrix to achieve service failure ?{
+~It helps to removes the services which are still in half-open state. 
+~%33.33%It helps to control the services by providing fault and latency tolerance. 
+~%33.33%It improves overall resilience of the system by isolating failing services 
+~%33.33%It helps for halting the cascading effect failures.
+~It makes it difficult to process some of the services that are not in the threshold state.
+}
+
+//Guid:- 8f1e1d3a-f110-4c35-ac63-219c53e8ef95
+_________ annotation will tell Spring Cloud that the reading application uses Hystrix and enable their monitoring, opening, and closing.?{
+~<code>@EnableZuulProxy</code>
+~<code>@HystrixCommand</code>
+=<code>@EnableHystrix</code>
+~<code>@Component</code>
+~<code>@Service</code>
+}
+
+//Guid:- 3ecad896-5b2e-49c8-a6ce-19a1a5be83ab
+________ annotation will wrap the method in a proxy connected to a circuit breaker so that Hystrix can monitor it.?{
+~<code>@EnableZuulProxy</code>
+=<code>@HystrixCommand</code>
+~<code>@EnableHystrix</code>
+~<code>@Component</code>
+~<code>@Service</code>
+}
+
+//Guid:- c4cd0f76-84da-40f1-8e2d-c23d6337045a
+::Select two Options::
+What are the two annotations used to make Hystrix monitor that class?{
+~<code>@EnableZuulProxy</code>
+~<code>@HystrixCommand</code>
+~<code>@EnableHystrix</code>
+~%50%<code>@Component</code>
+~%50%<code>@Service</code>
+}
+
+//Guid:- e390fed8-8ccf-4db5-8b20-76493806d517
+::Select three Options::
+What are some of the examples for message queues ?{
+    ~Netflix Ribbon
+    ~%33.33%RabbitMQ
+    ~%33.33%Amazon SQS
+    ~NetflixZuul
+    ~%33.33%Apache Kafka
+    ~Netflix Hystrix
+}
+
+//Guid:- 23cc6daf-1e8f-459f-ba92-25184480cad5
+What is true for producers?{
+    =Services adding messages to the queue.
+    ~Services taking messages from the queue.
+    ~None of the above.
+}
+
+//Guid:- e4d6150a-ae43-4cd6-be2b-e0aea895c39d
+What is true for consumers?{
+    ~Services adding messages to the queue.
+    =Services taking messages from the queue.
+    ~None of the above.
+}
+
+//Guid:- c21a2c7d-b8da-4aab-b711-82287f50ca55
+Apache kafka is a ?{
+    =Distributed Streaming Platform.
+    ~Distributed Messaging Platform.
+    ~Distributed Database Platform.
+    ~Independent Streaming Platform.
+}
+
+//Guid:- 3b064951-0b31-4edf-bb4e-437af1090f51
+Kafka cluster stores streams of records in categories called ?{
+    ~Producers
+    ~Consumers
+    ~Timestamp
+    ~Stream Processors
+    =Topics
+}
+
+//Guid:- a4e0289a-5cd3-4cfd-bdad-14091445711d
+__________ is used for executing high-level operations for sending messages.{
+=<code>KafkaTemplate</code>
+~<code>KafkaMessageListenerContainer</code>
+~<code>@KafkaListener</code>
+} 
+
+//Guid:- 60bc3cb2-e895-4174-95cf-967022f2a8c7
+::Select three Options::
+Records in kafka consist of ?{
+    ~%33.33%Key
+    ~Data
+    ~Stream
+    ~%33.33%Value
+    ~Topics
+    ~%33.33%Timestamp
+}
+
+//Guid:- daa58acb-df8e-4a85-ab2e-fde7a85b9566
+::Match the following features of Apache Kafka::
+=<code>KafkaMessageListenerContainer</code> -> used to construct an instance with the supplied configuration properties.
+=<code>@KafkaListener</code> -> Annotation that marks a method to be the target of a Kafka message listener on the specified topics. 
+=<code>KafkaTemplate</code> -> A template for executing high-level operations.
+=<code>KafkaEventListener</code> -> Not a valid listener.
+
+
+//Guid:- 3a608c81-a77d-4a75-a4f8-8ae04708e8f2
+Where does the configuration of config server of particular applications is pulled from ?{
+    ~Spring Configuration Server.
+    ~Spring Cloud Configuration Server.
+    =Git Repository
+    ~From ClassPath or Local FileSystem.
+    ~Environment Repository
+}
+
+//Guid:- 785cc8e7-12f5-4c90-a12c-a2b80c5b626b
+The config server stores the configuration data with the help of ____________.{
+    ~Spring Configuration Server.
+    ~Spring Cloud Configuration Server.
+    ~Git Repository
+    ~From ClassPath or Local FileSystem.
+    =Environment Repository
+}
+
+//Guid:- d5efa15c-16a9-4bbd-b313-4bfd71641ddc
+::Match the following parameterized environment resources::
+=<code>application</code> -> maps to <code>spring.application.name</code> on the client side.
+=<code>profile</code> -> maps to <code>spring.profiles.active</code> on the client.
+=<code>label</code> -> it is a server side feature labelling a versioned set of config files.
+
+//Guid:- 0b62ff4c-1eea-4f5e-be04-df834496b5bc
+Which of the following file is commonly used for configuration files and in applications where data is being stored or transmitted ?{
+~<code>spring.cloud.config</code>
+=<code>yaml or .yml</code>
+~<code>application.properties</code>
+~None of the above.
+}
+
+//Guid:- b687404b-580d-495c-baf7-82db4fefe332
+Client applications that want to consume the config server needs which file ?{
+~<code>spring.cloud.config.uri</code>
+~<code>application.properties</code>
+~<code>spring.profiles.active</code>
+=<code>bootstrap.yml</code>
+}
+
+
